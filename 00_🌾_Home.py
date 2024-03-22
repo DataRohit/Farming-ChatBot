@@ -1,7 +1,6 @@
 # Imports
 import streamlit as st
 
-
 # Set the page configuration
 st.set_page_config(
     page_title="Farming ChatBot 🌾",
@@ -10,48 +9,68 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-
-##### Title Start #####
-
 # Title of the page
 st.markdown("# Farming ChatBot 🌾")
+st.markdown("Welcome to the Farming ChatBot! 🚜🌾")
+st.markdown("")
 
-# Subtitle of the page
-st.markdown("#### **Welcome to the Farming ChatBot! 🚜🌾**")
-st.markdown("<br>", unsafe_allow_html=True)
-
-##### Title End #####
-
-
-# Description of Simple ChatBot
-st.markdown("### **Simple ChatBot**")
+# Introduction
+st.markdown("## Introduction")
 st.markdown(
     """
-This is a simple chatbot designed to assist with general farming queries. It collects basic information such as issue description and language preference.
+The Farming ChatBot is your digital companion for all things agriculture. Whether you're a seasoned farmer or just getting started, our chatbot is here to assist you with a wide range of farming queries and tasks.
 """
 )
 
-# Link to redirect to Simple ChatBot
-st.markdown("[Click here to use the Simple ChatBot](/Simple_ChatBot)")
+# Features
+st.markdown("## Features")
 
-# Description of Advanced ChatBot
-st.markdown("### **Advanced ChatBot**")
+# Simple ChatBot
+st.markdown("### Simple ChatBot")
 st.markdown(
     """
-The Advanced ChatBot provides more detailed assistance tailored to specific farming scenarios. It collects information about crop selection, land size, fertilizer usage, weather conditions, etc.
+Need quick answers to common farming questions? Our Simple ChatBot is perfect for you. It collects basic information and provides straightforward solutions to your queries.
 """
 )
 
-# Link to redirect to Advanced ChatBot
-st.markdown("[Click here to use the Advanced ChatBot](/Advanced_ChatBot)")
+# Advanced ChatBot
+st.markdown("### Advanced ChatBot")
+st.markdown(
+    """
+For more complex farming scenarios, our Advanced ChatBot steps in. It gathers detailed information about your farming setup and offers tailored advice on crop selection, land management, weather conditions, and more.
+"""
+)
 
 # Technologies Used
-st.markdown("### **Technologies Used**")
+st.markdown("## Technologies Used")
 st.markdown(
     """
-- Hugging Face Chat Model: The chatbot is powered by the Hugging Face Chat Model, specifically using the OpenChat/OpenChat-3.5-0106 model.
-- Hugging Face Chat API: The chatbot interacts with the Hugging Face Chat API to generate responses.
-- Streamlit: The web application is built using Streamlit, a Python library for building interactive web applications.
+-   **Hugging Face Chat Model**: Powering our chatbot with the latest advancements in natural language processing.
+-   **Streamlit**: Building our user-friendly web interface with Streamlit, making it easy to interact with the chatbot.
+-   **Hugging Face Chat API**: Enabling seamless communication between our chatbot and users through the API.
+"""
+)
+
+# Getting Started
+st.markdown("## Getting Started")
+st.markdown(
+    """
+1. Clone this repository.
+2. Install the required dependencies by running `pip install -r requirements.txt`.
+3. Run the Streamlit application using `streamlit run 00_🌾_Home.py`.
+4. Choose between the Simple or Advanced ChatBot and start interacting!
+"""
+)
+
+# Contribution Guidelines
+st.markdown("## Contribution Guidelines")
+st.markdown(
+    """
+We welcome contributions from the community to enhance the functionality and performance of our Farming ChatBot. Please follow these guidelines when contributing:
+
+-   Fork the repository and create your branch from `master`.
+-   Open a pull request with a clear description of the changes proposed.
+-   Ensure your code follows the project's coding standards and practices.
 """
 )
 
