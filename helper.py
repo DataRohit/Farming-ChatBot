@@ -22,15 +22,15 @@ user = Login(email=EMAIL, passwd=PASSWD)
 def prepare_query(user_inputs):
     # Initialize the query
     query = ""
-    
+
     # Loop through the user inputs
     for key, value in user_inputs.items():
         # Add the key and value to the query
         query += f"{key}: {value}\n"
-    
+
     # Add a new line at the end of the query
     query += "Give me a solution for this issue or give me some information about it."
-    
+
     # Return the query
     return query
 
@@ -41,15 +41,14 @@ def get_chatbot():
     # Set the cookies path
     COOKIES_PATH = "cookies.json"
 
-
     # Save the cookies
-    cookies = user.login(cookie_dir_path=COOKIES_PATH, save_cookies=True)
-
+    cookies = user.login(cookie_dir_path=COOKIES_PATH)
 
     # Initialize the chatbot
-    chatbot = hugchat.ChatBot(cookies=cookies.get_dict(), default_llm="openchat/openchat-3.5-0106")
-    
-    
+    chatbot = hugchat.ChatBot(
+        cookies=cookies.get_dict(), default_llm="openchat/openchat-3.5-0106"
+    )
+
     # Return the chatbot
     return chatbot
 
@@ -58,12 +57,12 @@ def get_chatbot():
 def get_response(user_inputs):
     # Get the chatbot
     chatbot = get_chatbot()
-    
+
     # Prepare the query
     query = prepare_query(user_inputs)
-    
+
     # Get the response from the chatbot
     response = chatbot.chat(query)
-    
+
     # Return the response
     return response
